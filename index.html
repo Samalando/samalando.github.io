@@ -9,14 +9,25 @@
 
   }
   .header {
+    display: flex;
+    gap: 80px;
     border-radius: 10px;
-    background-color: #7cda60;
+    background-color: #ed13d1;
     color: #fff;
-    padding: 5px 0;
+    padding: 20px 5px;
     box-shadow: 0 6px 4px rgba(0, 0, 0, 0.2);
 
   }
-
+.button {
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: #4b44f8;
+  color: #fff;
+  padding: 10px 0;
+  width: 150px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
   body {
     font-family: 'Mulish', sans-serif;
     background:
@@ -49,8 +60,10 @@
 
   <body>
   <div class="header">
-    <div style=".header">
-      <h1>o/</h1>
+      <button class="button" onclick="document.location='games/main.html'">About Me</button>
+      <button class="button" onclick="document.location='games/main.html'">Games</button>
+      <button class="button" onclick="document.location='games/main.html'">Code</button>
+      <button class="button" onclick="document.location='games/main.html'">Contact Me</button>
     </div>
 
   </div>
