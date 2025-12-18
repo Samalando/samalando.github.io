@@ -178,14 +178,14 @@
     .font-selector{
         position: static;
         top: 10px;
-        left: 10ox;
+        left: 10px;
         font-family: 'Open-Dyslexic',serif;
         width: auto;
         display: inline-block;
     }
     
         
-    .dark-mode{
+    .dark-mode-btn{
         position: fixed;
         top: 10px;
         right: 10px;
@@ -203,7 +203,7 @@
         background: #89a2f3;
         min-height: 100vh;
         display: flex;
-        align-items: stretch;
+        /*align-items: stretch;*/
         justify-content: space-between;
         flex-direction: column;
         margin: 0;
@@ -216,17 +216,10 @@
 	body.dyslexic-mode h1{
         font-size: 28px;
     }
-    
-    body.dark-mode{
+
+    body.dark-mode {
         background: #4d587a;
         color: white;
-        min-height: 100vh;
-        display: flex;
-        align-items: stretch;
-        justify-content: space-between;
-        flex-direction: column;
-        margin: 0;
-        padding: 0;
     }
 
     footer {
@@ -252,14 +245,14 @@
     <div class="font-selector">
         <button id="font-toggle" class="font-selector"> <h4>dyslexic mode</h4> </button>
     </div>
-<!--    <div class="dark-mode">-->
-<!--        <button id="dark-toggle" class="dark-mode"> <svg width="20px" height="20px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">-->
+    <div class="dark-mode-btn">
+        <button id="dark-toggle" class="dark-mode"> <svg width="20px" height="20px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
 
-<!--            <path d="M14,24A10,10,0,0,0,24,34V14A10,10,0,0,0,14,24Z"/>-->
-<!--            <path d="M24,2A22,22,0,1,0,46,24,21.9,21.9,0,0,0,24,2ZM6,24A18.1,18.1,0,0,1,24,6v8a10,10,0,0,1,0,20v8A18.1,18.1,0,0,1,6,24Z"/>-->
+            <path d="M14,24A10,10,0,0,0,24,34V14A10,10,0,0,0,14,24Z"/>
+            <path d="M24,2A22,22,0,1,0,46,24,21.9,21.9,0,0,0,24,2ZM6,24A18.1,18.1,0,0,1,24,6v8a10,10,0,0,1,0,20v8A18.1,18.1,0,0,1,6,24Z"/>
 
-<!--        </svg> </button>-->
-<!--    </div>-->
+        </svg> </button>
+    </div>
     <script src="scripts/fontswap.js"></script>
 <div class="content">
     <h1> Shaders that support Voxy!</h1>
