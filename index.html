@@ -1,8 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+    @font-face {
+        font-family: 'Mulish';
+        src: url('fonts/Mulish/static/Mulish-Bold.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
 
+    @font-face {
+        font-family: 'Open-Dyslexic';
+        src: url('fonts/opendyslexic/OpenDyslexic-Regular.otf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
     * {
         margin: 0;
         padding: 0;
@@ -12,9 +23,9 @@
 
     .header {
         display: flex;
-        gap: 10%;
+        gap: 15%;
         border-radius: 0 0 10px 10px;
-        background-color: rgba(50, 130, 232, 0.5);
+        background-color: rgba(79, 169, 243, 0.5);
         color: #fff;
         padding: 20px 5px;
         box-shadow: 0 6px 4px rgba(0, 0, 0, 0.2);
@@ -23,37 +34,122 @@
     }
 
     .button {
-        border: none;
-        outline: none;
+        border: #9e8dc3 1px;
         border-radius: 10px;
-        background-color: #9271c8;
+        background-color: #ac93da;
         color: #fff;
-        padding: 10px;
-        width: 20%;
+        padding: 8px;
+        width: 30%;
         box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
     }
 
     body {
         font-family: 'Mulish', sans-serif;
-        background: radial-gradient(circle at 20% 20%, #81c0ca 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, #9b90e4 0%, transparent 50%),
-        radial-gradient(circle at 40% 70%, #93a4e6 0%, transparent 50%),
-        #5586d5;
-        background-size: 300% 300%, 250% 250%, 400% 400%, 100% 100%;
-        animation: flow 15s ease-in-out infinite;
+        background: #89a2f3;
         min-height: 100vh;
+        display: flex;
+        /*align-items: stretch;*/
+        justify-content: space-between;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
     }
 
-    @keyframes flow {
-        0%, 100% {
-            background-position: 0 0, 100% 100%, 50% 50%, 0 0;
-        }
-        33% {
-            background-position: 100% 50%, 0 50%, 80% 20%, 0 0;
-        }
-        66% {
-            background-position: 50% 100%, 50% 0, 20% 80%, 0 0;
-        }
+    body.dyslexic-mode{
+        font-family: 'Open-Dyslexic', sans-serif;
+    }
+    body.dyslexic-mode h1{
+        font-size: 28px;
+    }
+
+    body.dark-mode {
+        background: #4d587a;
+        color: white;
+    }
+
+    .font-selector{
+        position: static;
+        top: 10px;
+        left: 10px;
+        font-family: 'Open-Dyslexic',serif;
+        width: auto;
+        display: inline-block;
+    }
+
+
+    .dark-mode-btn{
+        position: absolute;
+        top: 73px;
+        right: 10px;
+        width: auto;
+        display: inline-block;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 800px;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 100px;
+        padding: 40px 60px;
+        background: rgba(255, 255, 255, 0.21);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(9.4px);
+        -webkit-backdrop-filter: blur(9.4px);
+        border: 1px solid rgba(255, 255, 255, 0.28);
+    }
+
+    .card-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 30px;
+        padding: 30px 0;
+    }
+
+    .card:nth-child(odd) {
+        align-self: flex-start;
+        margin-left: 0;
+        border-radius: 0 160px 160px 0px;
+        
+    }
+
+    .card:nth-child(even) {
+        align-self: flex-end;
+        margin-right: 0;
+        border-radius: 160px 0  0 160px;
+    }
+
+    .card-all-text {
+        display: flex;
+        flex: 1;
+        align-items: flex-start;
+        flex-direction: column;
+
+    }
+
+    .card-title {
+        display: flex;
+        margin: 0;
+        align-items: flex-end;
+    }
+
+    .card-title h1 {
+        font-size: 50px;
+        font-weight: bold;
+    }
+
+    .card-text {
+        padding: 16px;
+        display: flex;
+        align-items: center;
+    }
+    button {
+        width: 100%;
+        background: none;
+        border: none;
     }
 </style>
 <head>
@@ -63,13 +159,67 @@
 </head>
 
 <body>
+
     <div class="header">
-        <button class="button" onclick="document.location='games/main.html'">About Me</button>
-        <button class="button" onclick="document.location='games/main.html'">Games</button>
-        <button class="button" onclick="document.location='games/main.html'">Code</button>
-        <button class="button" onclick="document.location='games/main.html'">Contact Me</button>
+        <button class="button" onclick="document.location='about/'">About Me</button>
+        <button class="button" onclick="document.location='projects/'">Projects</button>
+        <button class="button" onclick="document.location='contacts/'">Contact Me</button>
+    </div>
+    <div class="font-selector">
+        <button id="font-toggle" class="font-selector"> <h4>dyslexic mode</h4> </button>
+    </div>
+    <div class="dark-mode-btn">
+        <button id="dark-toggle" class="dark-mode"> <svg width="20px" height="20px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+
+            <path d="M14,24A10,10,0,0,0,24,34V14A10,10,0,0,0,14,24Z"/>
+            <path d="M24,2A22,22,0,1,0,46,24,21.9,21.9,0,0,0,24,2ZM6,24A18.1,18.1,0,0,1,24,6v8a10,10,0,0,1,0,20v8A18.1,18.1,0,0,1,6,24Z"/>
+
+        </svg> </button>
+    </div>
+    <script src="scripts/fontswap.js"></script>
+    
+    <div class="card-container">
+        <div class="card">
+            <div class="card-all-text">
+                <h1 class="card-title"> Hi!</h1>
+                <p class="card-text"> Welcome to my website, hope you enjoy it!</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-all-text">
+                <h1 class="card-title"> About me</h1>
+                <p class="card-text"> I'm Samalando, he/him/his and a cis male. Not taken, but not interested.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-all-text">
+                <h1 class="card-title"> <img src="https://cdn.discordapp.com/emojis/1183577160124993567.webp?size=48" sizes="50"> <img src="https://cdn.discordapp.com/emojis/1224413160472318082.webp?size=100&animated=true" sizes="50">  </h1>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-all-text">
+                <h1 class="card-title"> Source code?</h1>
+                <p class="card-text"><a href="https://github.com/Samalando/samalando.github.io">Found here :3 </a></p>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-all-text">
+                <h1 class="card-title">How can I contact you or give you money?</h1>
+                <p class="card-text"><a href="contacts.html"> Here :3 </a></p>
+            </div>
+        </div>
     </div>
 
-bleh
+
+    
+
+    
+
+
 </body>
 </html>
