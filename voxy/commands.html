@@ -55,8 +55,9 @@
     .card-all-text {
         display: flex;
         flex: 1;
-        align-items: flex-start;
         flex-direction: column;
+        align-content: center;
+        align-items: flex-start;
 
     }
 
@@ -76,17 +77,7 @@
         display: flex;
         align-items: center;
     }
-
-    .card-logos a {
-        width: 60px;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        margin-top: 0;
-
-    }
+    
 
     svg {
         object-fit: none;
@@ -96,16 +87,7 @@
         background: none;
         border: none;
     }
-
     
-    .card-logos a.patreon {
-        width: 250px;
-        height: 140px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
-    }
 
     .content {
         flex: 1;
@@ -199,11 +181,11 @@
     <div class="card">
         <div class="card-all-text">
             <div class="card-title">
-                <h3><code> /voxy import world [world name] </code></h3>
+                <h3><code>/voxy import world "&lt;worldName&gt"; </code></h3>
             </div>
             <div class="card-text">
                 <p>
-                    Imports all chunks generated from a world
+                    Generates Voxy chunks based on the existing world you named. This generates chunks for the dimension you are in when running the command
                 </p>
             </div>
         </div>
@@ -212,11 +194,11 @@
     <div class="card">
         <div class="card-all-text">
             <div class="card-title">
-                <h3><code> /voxy import bobby [world name] </code></h3>
+                <h3><code> /voxy import bobby "&lt;pathToBobby&gt;"</code></h3>
             </div>
             <div class="card-text">
                 <p>
-                    Imports all chunks cached by bobby
+                    Generates Voxy chunks from Bobby chunks.
                 </p>
             </div>
         </div>
@@ -225,7 +207,7 @@
     <div class="card">
         <div class="card-all-text">
             <div class="card-title">
-                <h3><code> /voxy import dh [/path/to/sqlite] </code></h3>
+                <h3><code> /voxy import distant_horizons "&lt;pathToSQLite&gt;" </code></h3>
             </div>
             <div class="card-text">
                 <p>
@@ -238,11 +220,11 @@
     <div class="card">
         <div class="card-all-text">
             <div class="card-title">
-                <h3><code> /voxy import raw [/path/to/region/file] </code></h3>
+                <h3><code> /voxy import raw "&lt;pathToRegion&gt;" </code></h3>
             </div>
             <div class="card-text">
                 <p>
-                    Imports all chunks located in the provided region file.
+                    Generates Voxy chunks from a region folder, in the current dimension.
                 </p>
             </div>
         </div>
@@ -251,11 +233,11 @@
     <div class="card">
         <div class="card-all-text">
             <div class="card-title">
-                <h3><code> /voxy import zip [/path/to/zip] </code></h3>
+                <h3><code> /voxy import zip "&lt;pathToZip&gt;" "&lt;PathInsideZipToRegion&gt;" </code></h3>
             </div>
             <div class="card-text">
                 <p>
-                    Imports all chunks found in the zip file. Must contain a region folder.
+                    Generates Voxy chunks from a zipped world file.
                 </p>
             </div>
         </div>
