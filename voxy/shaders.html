@@ -226,9 +226,22 @@
 
         </svg> </button>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const lastMod = new Date(document.lastModified);
+            document.getElementById('last-updated').textContent =
+                `Last updated: ${lastMod.toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: 'numeric'
+                })}`;
+        });
+    </script>
     <script src="/scripts/fontswap.js"></script>
 <div class="content">
     <h1> Shaders that support Voxy!</h1>
+    <h6 id="last-updated">h</h6>
     <div class="card-cortex">
         <div class="card-img">
             <img src="/imgs/cortex_pfp.webp" alt="logo" >
