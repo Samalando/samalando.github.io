@@ -7,14 +7,14 @@
         font-weight: normal;
         font-style: normal;
     }
-    
+
     @font-face {
         font-family: 'Open-Dyslexic';
         src: url('/fonts/opendyslexic/OpenDyslexic-Regular.otf') format('truetype');
         font-weight: normal;
         font-style: normal;
     }
-    
+
     * {
         margin: 0;
         padding: 0;
@@ -31,7 +31,7 @@
         align-items: center;
         justify-content: flex-start;
         gap: 45px;
-        padding-left: 40px ;
+        padding-left: 40px;
         background: rgba(255, 224, 130, 0.5);
         border-radius: 16px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -126,86 +126,106 @@
     svg {
         object-fit: none;
     }
+
     button {
         width: 100%;
         background: none;
         border: none;
     }
 
-        .card-logos a.patreon {
-            width: 250px;
-            height: 140px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0;
-        }
+    .card-logos a.patreon {
+        width: 250px;
+        height: 140px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
 
-        .content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 40px;
-            padding: 40px 20px;
-        }
+    .content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 40px 20px;
+    }
 
-        .font-selector {
-            position: static;
-            top: 10px;
-            left: 10px;
-            font-family: 'Open-Dyslexic', serif;
-            width: auto;
-            display: inline-block;
-        }
-
-
-        .dark-mode-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            width: auto;
-            display: inline-block;
-        }
+    .font-selector {
+        position: static;
+        top: 10px;
+        left: 10px;
+        font-family: 'Open-Dyslexic', serif;
+        width: auto;
+        display: inline-block;
+    }
 
 
-        body {
-            font-family: 'Mulish', sans-serif;
-            background: #89a2f3;
-            min-height: 100vh;
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
-            margin: 0;
-            padding: 0;
-        }
+    .dark-mode-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: auto;
+        display: inline-block;
+    }
 
-        body.dyslexic-mode {
-            font-family: 'Open-Dyslexic', sans-serif;
-        }
+    .footer-kofi{
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+    }
 
-        body.dyslexic-mode h1 {
-            font-size: 28px;
-        }
+    .footer-contact{
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+    }
 
-        body.dark-mode {
-            background: #4d587a;
-            color: white;
-        }
+    .footer-kofi a{
+        color: #000000;
+    }
 
-        footer {
+    .footer-contact a{
+        color: #000000;
+    }
 
-            bottom: 0;
-            padding: 20px;
-            margin: 0;
-            text-align: center;
-            background: rgba(255, 255, 255, 0.21);
-            backdrop-filter: blur(9.4px);
-            -webkit-backdrop-filter: blur(9.4px);
-            width: 100%;
-            border: none;
-            flex-shrink: 0;
-        }
+    body {
+        font-family: 'Mulish', sans-serif;
+        background: #89a2f3;
+        min-height: 100vh;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    body.dyslexic-mode {
+        font-family: 'Open-Dyslexic', sans-serif;
+    }
+
+    body.dyslexic-mode h1 {
+        font-size: 28px;
+    }
+
+    body.dark-mode {
+        background: #4d587a;
+        color: white;
+    }
+
+    footer {
+
+        bottom: 0;
+        padding: 20px;
+        margin: 0;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.21);
+        backdrop-filter: blur(9.4px);
+        -webkit-backdrop-filter: blur(9.4px);
+        width: 100%;
+        border: none;
+        flex-shrink: 0;
+    }
 </style>
 <head>
     <meta charset="utf-8">
@@ -241,7 +261,6 @@
     <script src="/scripts/fontswap.js"></script>
 <div class="content">
     <h1> Shaders that support Voxy!</h1>
-    <h6 id="last-updated">h</h6>
     <div class="card-cortex">
         <div class="card-img">
             <img src="/imgs/cortex_pfp.webp" alt="logo" >
@@ -830,10 +849,16 @@ c55.78-74.81,127.6-95.94,216.01-117.82C929.71,603.22,1033.27,483.3,1033.05,324.4
         </div>
 
     </div> <!-- sundial-->
+    <h3 id="last-updated">h</h3>
 </div>
 <footer>
-   <p> MIT Samalando 2025 <br> license of shaders is dependent on the pack and may not be MIT <br> testing.webp is made by saz, full credit to her </p>
-    
+   <p> MIT Samalando 2025 <br> license of shaders is dependent on the pack and may not be MIT </p>
+    <div class="footer-contact">
+        <a href="/contacts.html"> Contact me</a>
+    </div>
+    <div class="footer-kofi">
+        <a href="https://ko-fi.com/samalando"> Le Tip Jar</a>
+    </div>
 </footer>
 </body>
 </html>
