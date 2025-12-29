@@ -1,0 +1,338 @@
+@font-face {
+    font-family: 'Mulish';
+    src: url('/fonts/Mulish/static/Mulish-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open-Dyslexic';
+    src: url('/fonts/opendyslexic/OpenDyslexic-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+
+
+.card {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 90px;
+    padding: 40px 60px;
+    background: rgba(255, 255, 255, 0.21);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.4px);
+    -webkit-backdrop-filter: blur(9.4px);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-img {
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    padding: 0;
+}
+
+.card-all-text {
+    display: flex;
+    flex: 1;
+    align-items: flex-start;
+    flex-direction: column;
+
+}
+
+.card-title {
+    display: flex;
+    margin: 0;
+    align-items: flex-end;
+}
+
+.card-title h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.card-text {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.card-logos {
+    display: flex;
+    gap: 40px;
+
+    align-items: center;
+}
+
+.card-logos a {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-top: 0;
+
+}
+
+.button-icons {
+    width: 91px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 0;
+}
+
+svg {
+    object-fit: none;
+}
+
+button {
+    width: 100%;
+    background: none;
+    border: none;
+}
+
+.card-logos a.patreon {
+    width: 250px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 20px;
+}
+
+.font-selector {
+    position: static;
+    top: 10px;
+    left: 10px;
+    font-family: 'Open-Dyslexic', serif;
+    width: auto;
+    display: inline-block;
+}
+
+
+.dark-mode-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: auto;
+    display: inline-block;
+}
+
+.footer-kofi{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.footer-contact{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.footer-kofi a{
+    color: #000000;
+}
+
+.footer-contact a{
+    color: #000000;
+}
+
+body {
+    font-family: 'Mulish', sans-serif;
+    background: #89a2f3;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+body.dyslexic-mode {
+    font-family: 'Open-Dyslexic', sans-serif;
+}
+
+body.dyslexic-mode h1 {
+    font-size: 28px;
+}
+
+body.dark-mode {
+    background: #4d587a;
+    color: white;
+}
+
+footer {
+
+    bottom: 0;
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.21);
+    backdrop-filter: blur(9.4px);
+    -webkit-backdrop-filter: blur(9.4px);
+    width: 100%;
+    border: none;
+    flex-shrink: 0;
+}
+
+@font-face {
+    font-family: 'Mulish';
+    src: url('fonts/Mulish/static/Mulish-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open-Dyslexic';
+    src: url('fonts/opendyslexic/OpenDyslexic-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.header {
+    display: flex;
+    gap: 15%;
+    border-radius: 0 0 10px 10px;
+    background-color: rgba(79, 169, 243, 0.5);
+    color: #fff;
+    padding: 20px 5px;
+    box-shadow: 0 6px 4px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+
+}
+
+.button {
+    border: #9e8dc3 1px;
+    border-radius: 10px;
+    background-color: #ac93da;
+    color: #fff;
+    padding: 8px;
+    width: 30%;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.font-selector{
+    position: static;
+    top: 10px;
+    left: 10px;
+    font-family: 'Open-Dyslexic',serif;
+    width: auto;
+    display: inline-block;
+}
+
+
+.dark-mode-btn{
+    position: absolute;
+    top: 73px;
+    right: 10px;
+    width: auto;
+    display: inline-block;
+}
+
+.card {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 100px;
+    padding: 40px 60px;
+    background: rgba(255, 255, 255, 0.21);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.4px);
+    -webkit-backdrop-filter: blur(9.4px);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.card-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+    padding: 30px 0;
+}
+
+.card:nth-child(odd) {
+    align-self: flex-start;
+    margin-left: 0;
+    border-radius: 0 160px 160px 0px;
+
+}
+
+.card:nth-child(even) {
+    align-self: flex-end;
+    margin-right: 0;
+    border-radius: 160px 0  0 160px;
+}
+
+.card-all-text {
+    display: flex;
+    flex: 1;
+    align-items: flex-start;
+    flex-direction: column;
+
+}
+
+.card-title {
+    display: flex;
+    margin: 0;
+    align-items: flex-end;
+}
+
+.card-title h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.card-text {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+}
+
+button {
+    width: 100%;
+    background: none;
+    border: none;
+}
