@@ -57,6 +57,14 @@
         border: 1px solid rgba(255, 255, 255, 0.28);
     }
 
+    .all-cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 40px 60px;
+    }
+
     img {
         width: 100%;
         height: 100%;
@@ -160,6 +168,22 @@
         display: inline-block;
     }
 
+    .sorting{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        top: 0;
+    }
+
+    .sorting select{
+        width: 150px;
+        height: 40px;
+        border: none;
+        background: rgba(255, 255, 255, 0.21);
+        backdrop-filter: blur(9.4px);
+        -webkit-backdrop-filter: blur(9.4px);
+        font-size: 20px;
+    }
 
     .dark-mode-btn {
         position: absolute;
@@ -231,6 +255,7 @@
     <meta charset="utf-8">
 	<link rel="icon" href="/imgs/icon_main.webp">
     <title>voxy is cool!</title>
+
 </head>
 
 <body>
@@ -245,7 +270,9 @@
             <path d="M24,2A22,22,0,1,0,46,24,21.9,21.9,0,0,0,24,2ZM6,24A18.1,18.1,0,0,1,24,6v8a10,10,0,0,1,0,20v8A18.1,18.1,0,0,1,6,24Z"/>
 
         </svg> </button>
+
     </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const lastMod = new Date(document.lastModified);
@@ -260,7 +287,17 @@
     </script>
     <script src="/scripts/fontswap.js"></script>
 <div class="content">
+    <div class="sorting">
+        <select id="dropdown">
+            <option value="abc" selected>ABC</option>
+            <option value="zyx">ABC (Reversed)</option>
+            <option value="old">Oldest(top)</option>
+            <option value="new">Newest(top)</option>
+            <option value="dh">Has DH support</option>
+        </select>
+    </div>
     <h1> Shaders that support Voxy!</h1>
+
     <div class="card-cortex">
         <div class="card-img">
             <img src="/imgs/cortex_pfp.webp" alt="logo" >
@@ -283,6 +320,7 @@
             </div>
         </div>
     </div>
+    <div class="all-cards">
     <div class="card">
         <div class="card-img">
             <img src="https://cdn.modrinth.com/data/ZvMtQlho/90145c971ea24387775108fc86c89bed9bd2c8f1_96.webp" alt="shader logo" style="width: 96px; height: 96px;">
@@ -355,7 +393,7 @@
         </div>
         <div class="card-all-text">
             <div class="card-title">
-                <h1> BSL - Official </h1>
+                <h1> BSL </h1>
             </div>
             <div class="card-title">
                 <h3>Author: Capttatsu</h3>
@@ -700,7 +738,7 @@ c55.78-74.81,127.6-95.94,216.01-117.82C929.71,603.22,1033.27,483.3,1033.05,324.4
                 </a>
             </div>
         </div>
-    </div> <!-- photon-->
+    </div> <!-- photon -->
     <div class="card">
         <div class="card-img">
             <img src="/imgs/shrimple_icon.webp" alt="shader logo" style="width: 96px; height: 96px;">
@@ -856,6 +894,7 @@ c55.78-74.81,127.6-95.94,216.01-117.82C929.71,603.22,1033.27,483.3,1033.05,324.4
         </div>
 
     </div> <!-- sundial-->
+    </div>
     <h3 id="last-updated">h</h3>
 </div>
 <footer>
@@ -867,5 +906,6 @@ c55.78-74.81,127.6-95.94,216.01-117.82C929.71,603.22,1033.27,483.3,1033.05,324.4
         <a href="https://ko-fi.com/samalando"> Le Tip Jar</a>
     </div>
 </footer>
+    <script src="/scripts/sorting.js"></script>
 </body>
 </html>
