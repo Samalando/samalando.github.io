@@ -12,9 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
             sortSectionsCustom('old');
         } else if (selectedValue === 'new') {
             sortSectionsCustom('newest');
-        } else if (selectedValue === 'dh') {
-            sortSectionsCustom('dh');
         }
+
     });
 
     function sortSections(direction) {
@@ -40,23 +39,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function sortSectionsCustom(direction) {
         const customOrder = ['Photon', 'Shrimple', 'Glimmer', 'Eclipse - A Bliss Edit', 'Sundial-lite', 'Bliss - Official', 'I like Vanilla', 'BSL', 'Continuum 2.0 Redux', 'Solas', 'Noble'];
-        const DHSupport = ['Bliss - Official', 'BSL', 'Eclipse - A Bliss Edit', 'Glimmer', 'Noble', 'Photon', 'Shrimple', 'Solas', 'Sundial-Lite'];
 
         const container = document.querySelector('.all-cards');
         const cards = Array.from(container.querySelectorAll('.card'));
-
-        if (direction === 'dh') {
-            cards.forEach(card => {
-                const title = card.querySelector('.card-title').textContent.trim();
-
-                if (customOrder.includes(title) && !DHSupport.includes(title)) {
-                    card.style.display = 'none';
-                } else {
-                    card.style.display = '';
-                }
-            });
-        } else {
-            // Show all cards and sort them
             cards.forEach(card => card.style.display = '');
 
             cards.sort((a, b) => {
@@ -75,5 +60,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
             cards.forEach(card => container.appendChild(card));
         }
-    }
 });
