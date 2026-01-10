@@ -1,8 +1,26 @@
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const dropdown = document.getElementById('dropdown');
 
+
+    let savedValue = localStorage.getItem('selected');
+    if (savedValue !== null) {
+        dropdown.value = savedValue;
+        if (savedValue === 'abc') {
+            sortSections('abc');
+        } else if (savedValue === 'zyx') {
+            sortSections('zyx');
+        } else if (savedValue === 'old') {
+            sortSectionsCustom('old');
+        } else if (savedValue === 'new') {
+            sortSectionsCustom('newest');
+        }
+    }
+
+
     dropdown.addEventListener('change', function() {
-        const selectedValue = this.value;
+        let selectedValue = this.value;
 
         if (selectedValue === 'abc') {
             sortSections('abc');
@@ -14,7 +32,10 @@ document.addEventListener('DOMContentLoaded', function() {
             sortSectionsCustom('newest');
         }
 
+
+        localStorage.setItem('selected', selectedValue);
     });
+
 
     function sortSections(direction) {
         const container = document.querySelector('.all-cards');
