@@ -1,5 +1,32 @@
 <!DOCTYPE html>
 <html lang="en-us">
+<head>
+    <script>
+        if (localStorage.getItem('showAds') !== 'false') {
+            const adsenseScript = document.createElement('script');
+            adsenseScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2886345028000403';
+            adsenseScript.async = true;
+            adsenseScript.crossOrigin = 'anonymous';
+            document.head.appendChild(adsenseScript);
+
+            adsenseScript.onload = function() {
+                const observer = new MutationObserver(function(mutations) {
+                    mutations.forEach(function(mutation) {
+                        mutation.removedNodes.forEach(function(node) {
+                            if (node.classList && (node.classList.contains('google-bottom-anchor-ad') ||
+                                node.getAttribute('data-anchor-status') === 'dismissed')) {
+                                localStorage.setItem('showAds', 'false');
+                                console.log('Anchor ad closed - ads disabled');
+                            }
+                        });
+                    });
+                });
+
+                observer.observe(document.body, { childList: true, subtree: true });
+            };
+        }
+    </script>
+</head>
 <style>
     @font-face {
         font-family: 'Mulish';
