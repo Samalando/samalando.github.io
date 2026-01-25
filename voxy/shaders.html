@@ -1,5 +1,32 @@
 <!DOCTYPE html>
 <html lang="en-us">
+<head>
+    <script>
+        if (localStorage.getItem('showAds') !== 'false') {
+            const adsenseScript = document.createElement('script');
+            adsenseScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2886345028000403';
+            adsenseScript.async = true;
+            adsenseScript.crossOrigin = 'anonymous';
+            document.head.appendChild(adsenseScript);
+
+            adsenseScript.onload = function() {
+                const observer = new MutationObserver(function(mutations) {
+                    mutations.forEach(function(mutation) {
+                        mutation.removedNodes.forEach(function(node) {
+                            if (node.classList && (node.classList.contains('google-bottom-anchor-ad') ||
+                                node.getAttribute('data-anchor-status') === 'dismissed')) {
+                                localStorage.setItem('showAds', 'false');
+                                console.log('Anchor ad closed - ads disabled');
+                            }
+                        });
+                    });
+                });
+
+                observer.observe(document.body, { childList: true, subtree: true });
+            };
+        }
+    </script>
+</head>
 <style>
     @font-face {
         font-family: 'Mulish';
@@ -939,11 +966,30 @@ c55.78-74.81,127.6-95.94,216.01-117.82C929.71,603.22,1033.27,483.3,1033.05,324.4
 </div>
 <footer>
    <p> Samalando 2026, All Rights Reserved. <br> license of shaders is dependent on the pack and may not be ARR </p>
+    <button id="toggleAds" onclick="toggleAds()" style=" background: none; color:cadetblue; border: black; border-radius: 4px; cursor: pointer; width: 10%">
+        Toggle Ads
+    </button>
+
+    <script>
+        function toggleAds() {
+            const currentState = localStorage.getItem('showAds');
+
+            if (currentState === 'false') {
+                localStorage.setItem('showAds', 'true');
+            } else {
+                localStorage.setItem('showAds', 'false');
+            }
+            location.reload();
+        }
+
+
+    </script>
     <div class="footer-contact">
         <a href="/contacts.html"> Contact me</a>
     </div>
     <div class="footer-kofi">
         <a href="https://ko-fi.com/samalando"> Le Tip Jar</a>
+
     </div>
 </footer>
     <script src="/scripts/sorting.js"></script>
