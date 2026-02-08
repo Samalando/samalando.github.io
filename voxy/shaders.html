@@ -1,32 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head>
-    <script>
-        if (localStorage.getItem('showAds') !== 'false') {
-            const adsenseScript = document.createElement('script');
-            adsenseScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2886345028000403';
-            adsenseScript.async = true;
-            adsenseScript.crossOrigin = 'anonymous';
-            document.head.appendChild(adsenseScript);
 
-            adsenseScript.onload = function() {
-                const observer = new MutationObserver(function(mutations) {
-                    mutations.forEach(function(mutation) {
-                        mutation.removedNodes.forEach(function(node) {
-                            if (node.classList && (node.classList.contains('google-bottom-anchor-ad') ||
-                                node.getAttribute('data-anchor-status') === 'dismissed')) {
-                                localStorage.setItem('showAds', 'false');
-                                console.log('Anchor ad closed - ads disabled');
-                            }
-                        });
-                    });
-                });
-
-                observer.observe(document.body, { childList: true, subtree: true });
-            };
-        }
-    </script>
-</head>
 <style>
     @font-face {
         font-family: 'Mulish';
@@ -283,6 +257,12 @@
 	<link rel="icon" href="/imgs/icon_main.webp">
     <title>voxy is cool!</title>
 
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="18996853-343d-4381-b549-9f8ae0c5d1c0" data-blockingmode="auto" type="text/javascript"></script>
+
+    <script data-cookieconsent="marketing"
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9390813779358373"
+            crossOrigin="anonymous"></script>
 </head>
 
 <body>
