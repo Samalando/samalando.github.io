@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     function sortSectionsCustom(direction) {
-        const customOrder = ['Photon', 'Shrimple', 'Glimmer', 'Eclipse - A Bliss Edit', 'Sundial-lite', 'Bliss - Official', 'I like Vanilla', 'BSL', 'Continuum 2.0 Redux', 'Solas', 'Noble', 'Bloop'];
+        const customOrder = ['Photon', 'Shrimple', 'Glimmer', 'Eclipse - A Bliss Edit', 'Sundial-lite', 'Bliss - Official', 'I like Vanilla', 'BSL', 'Continuum 2.0 Redux', 'Solas', 'Noble', 'Bloop', 'Spring Shaders', 'Alpha Piscium', 'Render Pearl', 'Revelation', 'Lumina', 'Reverie'];
 
         const container = document.querySelector('.all-cards');
         const cards = Array.from(container.querySelectorAll('.card'));
