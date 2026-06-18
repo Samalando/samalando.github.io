@@ -1,0 +1,111 @@
+body {
+  font-family: 'Mulish', sans-serif;
+  background: #efe9d6;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+body.dyslexic-mode {
+  font-family: monospace;
+}
+
+body.dyslexic-mode h1 {
+  font-size: 28px;
+}
+
+body.dark-mode {
+  background: #0f353f;
+  color: white;
+}
+ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer {
+
+  bottom: 0;
+  padding: 20px;
+  margin: 0;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.21);
+  backdrop-filter: blur(9.4px);
+  -webkit-backdrop-filter: blur(9.4px);
+  width: 100%;
+  border: none;
+  flex-shrink: 0;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('../public/fonts/Mulish/static/Mulish-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open-Dyslexic';
+  src: url('../public/fonts/opendyslexic/OpenDyslexic-Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.header {
+  display: flex;
+  gap: 15%;
+  background-color: rgb(230 225 206);
+  color: #586e75;
+  padding: 20px 5px;
+
+  backdrop-filter: blur(5px);
+
+}
+
+.button {
+  border: #b7b4a3 1px;
+  background-color: #cfcab9;
+  color: #586e75;
+  padding: 8px;
+  width: 30%;
+}
+
+.font-selector{
+  position: static;
+  top: 10px;
+  left: 10px;
+  font-family: monospace;
+  width: auto;
+  display: inline-block;
+}
+
+
+.dark-mode-btn{
+  position: absolute;
+  top: 73px;
+  right: 10px;
+  width: auto;
+  display: inline-block;
+}
+
+.sorting {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 0;
+}
+
+
