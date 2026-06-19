@@ -118,7 +118,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
     object-fit: fill;
     padding: 0;
 }
