@@ -78,7 +78,7 @@ const CardData = [
     {
         Name: "Euphoria Patches",
         Image: "EuphoriaPatchesLogo.webp",
-        Author: "SapcEagle17",
+        Author: "SpacEagle17",
         Description: "Euphoria Patches is an add-on for Complementary Shaders, extending it with more optional features and settings.",
         Discord: "https://euphoriapatches.com/discord",
         Github: "https://github.com/EuphoriaPatches/EuphoriaPatcher",
