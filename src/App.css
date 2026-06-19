@@ -1,0 +1,11 @@
+.all-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 40px 60px;
+}
+.center-text{
+  text-align: center;
+  padding: 20px;
+}
