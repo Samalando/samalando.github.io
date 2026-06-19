@@ -63,6 +63,7 @@
     flex: 1;
     align-items: flex-start;
     flex-direction: column;
+    font-weight: 500;
 
 }
 
@@ -140,8 +141,7 @@ button {
     position: absolute;
     top: 10px;
     left: 10px;
-    font-family: 'Open-Dyslexic', serif;
-    width: auto;
+    font-family: monospace !important;
     display: inline-block;
 }
 
@@ -191,6 +191,11 @@ body.dyslexic-mode h1 {
     font-size: 28px;
 }
 
+.row {
+    display: flex;
+    padding: 20px;
+}
+
 body.dark-mode {
     background: #4d587a;
     color: white;
@@ -199,7 +204,7 @@ body.dark-mode {
 footer {
 
     bottom: 0;
-    padding: 20px;
+    padding: 20px 20px 0 20px;
     margin: 0;
     text-align: center;
     background: rgba(255, 255, 255, 0.21);

@@ -68,9 +68,17 @@ const CardData = [
         Discord: "https://discord.gg/8nVt56H9zH"
     },
     {
+        Name: "E-Lite",
+        Image: "elite_icon.jpeg",
+        Author: "Entokito",
+        Description: "A MakeUp - Ultra Fast shaders edit that is highly customizable, beautiful, and fast!",
+        Github: "https://github.com/EntokitoDezonze/E-LITE-shaders",
+        Modrinth: "https://modrinth.com/shader/lite-shaders",
+    },
+    {
         Name: "Euphoria Patches",
         Image: "EuphoriaPatchesLogo.webp",
-        Author: "SapceEagle17",
+        Author: "SapcEagle17",
         Description: "Euphoria Patches is an add-on for Complementary Shaders, extending it with more optional features and settings.",
         Discord: "https://euphoriapatches.com/discord",
         Github: "https://github.com/EuphoriaPatches/EuphoriaPatcher",
@@ -125,6 +133,14 @@ const CardData = [
         kofi: "https://ko-fi.com/the_cmk"
     },
     {
+        Name: "MakeUp - Ultra Fast",
+        Image: "makeup_icon.webp",
+        Author: "KDXavier",
+        Description: "MakeUp aims to provide the best quality / performance ratio, building a shader that can be adapted to anyone's resources.",
+        Github: "https://github.com/javiergcim/MakeUpUltraFast",
+        Modrinth: "https://modrinth.com/shader/makeup-ultra-fast-shaders"
+    },
+    {
         Name: "Noble",
         Image: "Noble_icon.webp",
         Author: "Belmu",
@@ -167,6 +183,14 @@ const CardData = [
         Description: "Shader with a foggy and warm look.\n                     It leverages new features added by Iris for effects previously impossible to achieve.",
         Modrinth: "https://modrinth.com/shader/reverie_shader",
         kofi: "https://ko-fi.com/the_cmk"
+    },
+    {
+        Name: "SEUS PTGI GFME",
+        Image: "sundial_logo_temp.jpg",
+        Author: "GeForceLegend",
+        Description: "A deeply modified version of SEUS PTGI",
+        Github: "https://github.com/GeForceLegend/SEUS_PTGI_GFME",
+
     },
     {
         Name: "Shrimple",
@@ -229,7 +253,7 @@ export default function VoxyShaders() {
     const [sortOrder, setSortOrder] = useState(localStorage.getItem('sortOrder') ?? 'abc')
 
     const sortedCards = [...CardData].sort((a, b) => {
-        const customOrder = ['Photon', 'Shrimple', 'Glimmer', 'Eclipse - A Bliss Edit', 'Sundial Lite', 'Bliss - Official', 'I like Vanilla', 'BSL', 'Continuum 2.0 Redux', 'Solas', 'Noble', 'Bloop', 'Just Colored Lighting', 'Spring Shaders', 'Mellow', 'Alpha Piscium', 'Render Pearl', 'Revelation', 'Lumina', 'Reverie', 'Complementary Shaders', 'Euphoria Patches', 'Steadfast', 'Sildurs Shaders'];
+        const customOrder = ['Photon', 'Shrimple', 'Glimmer', 'Eclipse - A Bliss Edit', 'Sundial Lite', 'Bliss - Official', 'I like Vanilla', 'BSL', 'Continuum 2.0 Redux', 'Solas', 'Noble', 'Bloop', 'Just Colored Lighting', 'Spring Shaders', 'Mellow', 'Alpha Piscium', 'Render Pearl', 'Revelation', 'Lumina', 'Reverie', 'MakeUp - Ultra Fast', 'Steadfast', 'Complementary Shaders', 'Euphoria Patches',  'Sildurs Shaders', 'E-Lite', 'SEUS PTGI GFME' ];
         const titleA = a.Name.trim();
         const titleB = b.Name.trim();
 
@@ -251,6 +275,7 @@ export default function VoxyShaders() {
     return (
         <>
             <div className="content">
+                <div className="row">
             <div className="sorting">
                 <select value={sortOrder} onChange={(e) => {
                     setSortOrder(e.target.value);
@@ -265,7 +290,7 @@ export default function VoxyShaders() {
                 <br />
                 <div className="font-selector">
                     <button onClick={() => setDyslexicEnabled(!dyslexicEnabled)}>
-                        <h4>dyslexic mode</h4>
+                        <h3 className="font-selector"> Dyslexic Mode</h3>
                     </button>
                 </div>
                 <div className="dark-mode-btn">
@@ -280,6 +305,7 @@ export default function VoxyShaders() {
                     </button>
 
 
+                </div>
                 </div>
                 <div className="all-cards">
                     {sortedCards.map(card => (
