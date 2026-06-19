@@ -10,7 +10,7 @@ export default function Home() {
                 <Link to="/">Home Page</Link>
             </button>
             <button className="button">
-                <Link to="/portfolio">Portfolio</Link>
+                <a href="https://samalando.eu">Portfolio</a>
             </button>
             <button className="button">
                 <Link to="/contact">Contact Me</Link>
