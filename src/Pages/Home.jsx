@@ -1,4 +1,4 @@
-import '../App.css'
+ import '../App.css'
 import {Link} from "react-router-dom";
 
 export default function Home() {
@@ -17,7 +17,7 @@ export default function Home() {
             </button>
         </div>
             <div className='center-text'>
-                Hey person! I make stuff sometimes and now you get to see that stuff
+                Hey person! I make stuff sometimes and now you get to see that stuff <br /> missing blahaj, main suspect is marazu, please contact if found
             </div>
       </>
   )
