@@ -161,6 +161,16 @@ const CardData = [
         kofi: "https://ko-fi.com/sixthsurge"
     },
     {
+        Name: "Refrax",
+        Image: "refrax_icon.webp",
+        Author: "Coredex",
+        Description: "Refrax is a performance and feature-focused Minecraft shaderpack.",
+        Github: "https://github.com/coredex-source/Refrax-Shaders",
+        Modrinth: "https://modrinth.com/shader/refrax",
+        Discord: "https://discord.gg/qX7uy6eERC",
+        Kofi: "https://ko-fi.com/coredex",
+    },
+    {
         Name: "Render Pearl",
         Image: "renderpearl.webp",
         Author: "Luracasmus",
@@ -253,7 +263,7 @@ export default function VoxyShaders() {
     const [sortOrder, setSortOrder] = useState(localStorage.getItem('sortOrder') ?? 'abc')
 
     const sortedCards = [...CardData].sort((a, b) => {
-        const customOrder = ['Photon', 'Shrimple', 'Glimmer', 'Eclipse - A Bliss Edit', 'Sundial Lite', 'Bliss - Official', 'I like Vanilla', 'BSL', 'Continuum 2.0 Redux', 'Solas', 'Noble', 'Bloop', 'Just Colored Lighting', 'Spring Shaders', 'Mellow', 'Alpha Piscium', 'Render Pearl', 'Revelation', 'Lumina', 'Reverie', 'MakeUp - Ultra Fast', 'Steadfast', 'Complementary Shaders', 'Euphoria Patches',  'Sildurs Shaders', 'E-Lite', 'SEUS PTGI GFME' ];
+        const customOrder = ['Photon', 'Shrimple', 'Glimmer', 'Eclipse - A Bliss Edit', 'Sundial Lite', 'Bliss - Official', 'I like Vanilla', 'BSL', 'Continuum 2.0 Redux', 'Solas', 'Noble', 'Bloop', 'Just Colored Lighting', 'Spring Shaders', 'Mellow', 'Alpha Piscium', 'Render Pearl', 'Revelation', 'Lumina', 'Reverie', 'MakeUp - Ultra Fast', 'Steadfast', 'Complementary Shaders', 'Euphoria Patches',  'Sildurs Shaders', 'E-Lite', 'SEUS PTGI GFME', "Refrax" ];
         const titleA = a.Name.trim();
         const titleB = b.Name.trim();
 
