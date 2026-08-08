@@ -141,6 +141,14 @@ const CardData = [
         Modrinth: "https://modrinth.com/shader/makeup-ultra-fast-shaders"
     },
     {
+      Name: "Miniature Shader",
+        Image: "miniature_icon.jpeg",
+        Author: "ukrech",
+        Description: "Extremely lightweight with shadows and reflections",
+        Modrinth: "https://modrinth.com/shader/miniature-shader",
+        Github: "https://github.com/mateuskreuch/minecraft-miniature-shader",
+    },
+    {
         Name: "Noble",
         Image: "Noble_icon.webp",
         Author: "Belmu",
@@ -263,7 +271,7 @@ export default function VoxyShaders() {
     const [sortOrder, setSortOrder] = useState(localStorage.getItem('sortOrder') ?? 'abc')
 
     const sortedCards = [...CardData].sort((a, b) => {
-        const customOrder = ['Photon', 'Shrimple', 'Glimmer', 'Eclipse - A Bliss Edit', 'Sundial Lite', 'Bliss - Official', 'I like Vanilla', 'BSL', 'Continuum 2.0 Redux', 'Solas', 'Noble', 'Bloop', 'Just Colored Lighting', 'Spring Shaders', 'Mellow', 'Alpha Piscium', 'Render Pearl', 'Revelation', 'Lumina', 'Reverie', 'MakeUp - Ultra Fast', 'Steadfast', 'Complementary Shaders', 'Euphoria Patches',  'Sildurs Shaders', 'E-Lite', 'SEUS PTGI GFME', "Refrax" ];
+        const customOrder = ['Photon', 'Shrimple', 'Glimmer', 'Eclipse - A Bliss Edit', 'Sundial Lite', 'Bliss - Official', 'I like Vanilla', 'BSL', 'Continuum 2.0 Redux', 'Solas', 'Noble', 'Bloop', 'Just Colored Lighting', 'Spring Shaders', 'Mellow', 'Alpha Piscium', 'Render Pearl', 'Revelation', 'Lumina', 'Reverie', 'Miniature Shader', 'MakeUp - Ultra Fast', 'Steadfast', 'Complementary Shaders', 'Euphoria Patches',  'Sildurs Shaders', 'E-Lite', 'SEUS PTGI GFME', "Refrax" ];
         const titleA = a.Name.trim();
         const titleB = b.Name.trim();
 
